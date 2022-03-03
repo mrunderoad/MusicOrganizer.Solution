@@ -2,26 +2,15 @@
   Layout = "_Layout";
 }
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>My To-Do List!</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Add a new Artist to @Model.Name</h1>
-      </div>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Add a new Artist to @Model.Name</h1>
+  </div>
 
-      <form action="/collections/@Model.Id/artists" method="post">
-        <input for="collectionId" name="collectionId" type="hidden" value="@Model.Id">
-        <label for="artistName">Artist Name</label>
-        <input id="artistName" name="artistName" type="text">
-        <button class="btn-success" type="submit">Add Artist</button>
-      </form>
-    </div>
-  </body>
-</html>
+  <form action="/collections/@Model.Id/artists" method="post">
+    <input for="collectionId" name="collectionId" type="hidden" value="@Model.Id">
+    <label for="artistName">Artist Name</label>
+    <input id="artistName" name="artistName" type="text">
+    <button class="btn-success" type="submit">Add Artist</button>
+  </form>
+</div>

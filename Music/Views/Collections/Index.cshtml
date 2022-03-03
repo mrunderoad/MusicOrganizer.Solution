@@ -2,29 +2,20 @@
   Layout = "_Layout";
 }
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>My To-Do List!</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      @using Music.Models;
 
-      <h1>Check out your records!</h1>
+<div class="container">
+   @using Music.Models;
 
-      @if (@Model.Count == 0)
-      {
-        <h3>You have no records yet, expand your collection!</h3>
-      }
+  <h1>Check out your records!</h1>
 
-      @foreach (Collection collection in Model)
-      {
-        <h3><a href='/collections/@collection.Id'>@collection.Name</a></h3>
-      }
-    </div>
-  </body>
-</html>    
+  @if (@Model.Count == 0)
+  {
+    <h3>You have no records yet, expand your collection!</h3>
+  }
+
+  @foreach (Collection collection in Model)
+  {
+    <h3><a href='/collections/@collection.Id'>@collection.Name</a></h3>
+  }
+</div>
+    

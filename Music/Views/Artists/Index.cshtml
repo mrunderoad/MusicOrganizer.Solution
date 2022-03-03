@@ -2,36 +2,25 @@
   Layout = "_Layout";
 }
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>My To-Do List!</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      @using Music.Models;
-      <div class="jumbotron">
-        <h1>Record Artist List</h1>
-      </div>  
-      @if (Model.Count == 0)
-      {
-        <p>There are no artists on the record.</p>
-      }
-      <ul>
-        @foreach (Artist artist in Model)
-        {
-          <li><a href='/artists/@artist.Id'>@artist.ArtistName</a></li>
-        }
-      </ul>
-      <h2>Add an Artist here!</h2>
-      <a href="/artists/new"><button class="btn-success">Add new Artist</button></a>
-      <form action="/artists/delete" method="post">
-      <button class="btn-danger" type="submit" name="button">Clear All Artists</button>
-      </form>
-   
-    </div>
-  </body>
-</html>
+<div class="container">
+  @using Music.Models;
+  <div class="jumbotron">
+    <h1>Record Artist List</h1>
+  </div>  
+  @if (Model.Count == 0)
+  {
+    <p>There are no artists on the record.</p>
+  }
+  <ul>
+    @foreach (Artist artist in Model)
+    {
+      <li><a href='/artists/@artist.Id'>@artist.ArtistName</a></li>
+    }
+  </ul>
+  <h2>Add an Artist here!</h2>
+  <a href="/artists/new"><button class="btn-success">Add new Artist</button></a>
+  <form action="/artists/delete" method="post">
+    <button class="btn-danger" type="submit" name="button">Clear All Artists</button>
+  </form>
+    
+</div>

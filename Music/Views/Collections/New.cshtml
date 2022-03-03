@@ -2,26 +2,15 @@
   Layout = "_Layout";
 }
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>My To-Do List!</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Add a Record!</h1>
-      <p>Add to your collection here:</p>
+<div class="container">
+  <h1>Add a Record!</h1>
+  <p>Add to your collection here:</p>
 
-      <form action="/collections" method="post">
-        <label for="recordName">Record Name:</label>
-        <input id="recordName" name="recordName" type="text">
-        <button class="btn-success" type="submit">Add Record</button>
-      </form>
+  <form action="/collections" method="post">
+    <label for="recordName">Record Name:</label>
+    <input id="recordName" name="recordName" type="text">
+    <button class="btn-success" type="submit">Add Record</button>
+  </form>
 
-      <a href="/"><button class="btn-warning">Back to Records</button></a>
-    </div>
-  </body>
-</html>    
+  <a href="/"><button class="btn-warning">Back to Records</button></a>
+</div>    
