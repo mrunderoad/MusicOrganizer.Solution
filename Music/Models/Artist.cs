@@ -14,5 +14,15 @@ namespace Music.Models
       _artists.Add(this);
       Id = _artists.Count;
     }
+
+    public static List<Artist> GetAll()
+    {
+      return _artists;
+    }
+
+    public static void ClearAll()
+    {
+      _artists.Clear();
+    }
   }
 }
