@@ -60,5 +60,14 @@ namespace Music.TestTools
       List<Artist> result = Artist.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetId_ReturnsArtistId_Int()
+    {
+      string artist = "Freddie Mercury";
+      Artist newArtist = new Artist(artist);
+      int result = newArtist.Id;
+      Assert.AreEqual(1, result);
+    }
   }
 }
